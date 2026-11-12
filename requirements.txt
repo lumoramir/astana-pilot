@@ -1,0 +1,19 @@
+﻿# Core simulator, tools, audit (pip install -e .)
+numpy>=1.24
+scipy>=1.11
+networkx>=3.1
+pillow>=10.0
+matplotlib>=3.7
+gymnasium>=0.29
+requests>=2.31
+# Training (pip install -e ".[train]"); install the CUDA build of torch separately, LAST:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124 --force-reinstall --no-deps
+stable-baselines3>=2.3
+tensorboard>=2.14
+# Viewers / video (pip install -e ".[view]")
+ursina>=7.0
+pygame>=2.5
+imageio>=2.34
+imageio-ffmpeg>=0.5
+# Tests
+pytest>=7.4

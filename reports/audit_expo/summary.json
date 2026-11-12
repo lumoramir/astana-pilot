@@ -1,0 +1,41 @@
+{
+ "baseline": {
+  "label": "baseline",
+  "trips": 96,
+  "km": 36.41156293007301,
+  "success": 0.75,
+  "collisions": 17,
+  "mean_trip_min": 1.5797743055555278,
+  "events": {
+   "collision": 17,
+   "aeb": 112,
+   "ttc": 93,
+   "red_light": 0,
+   "yellow_light": 0,
+   "stop_sign": 0,
+   "yield": 0,
+   "zebra": 1,
+   "ped_close": 2,
+   "hard_brake": 420,
+   "phantom_brake": 118
+  },
+  "events_per_100km": {
+   "collision": 46.68846550928846,
+   "aeb": 307.5945962964887,
+   "ttc": 255.41337013904862,
+   "red_light": 0.0,
+   "yellow_light": 0.0,
+   "stop_sign": 0.0,
+   "yield": 0.0,
+   "zebra": 2.746380324075792,
+   "ped_close": 5.492760648151584,
+   "hard_brake": 1153.4797361118326,
+   "phantom_brake": 324.07287824094345
+  },
+  "weighted_per_100km": 3311.0361187057742,
+  "weighted_ci95": [
+   2841.666954944397,
+   3847.1098127905366
+  ]
+ }
+}

@@ -1,0 +1,58 @@
+﻿# ============================================================================
+#  Astana Pilot - what never goes to GitHub (~7.5 GB on the dev machine)
+#  Everything here is either installed (pip), regenerated on first run, or a
+#  training by-product. The repository keeps: source, tests, docs, scripts,
+#  OSM cache (maps rebuild offline) and ONE published network in demo_weights/.
+# ============================================================================
+
+# ---- Python environment & tooling (.venv alone is ~5.6 GB)
+#      (comments must stay on their own lines: git reads "# ..." after a pattern as part of it)
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---- Editors / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Training output: checkpoints, TensorBoard logs, expert demos (~0.5 GB)
+#      The published network lives in demo_weights/ (see demo_weights/README.md).
+runs/
+events.out.tfevents.*
+*.tfevents.*
+*.npz
+
+# ---- Generated assets (rebuilt automatically)
+#      assets/cache: baked 3-D scene geometry (~1.2 GB), rebuilt on the first start of the viewer
+#      assets/maps/*.pkl: `astana map --preset expo|nurzhol` rebuilds them offline from assets/osm_cache
+assets/cache/
+assets/maps/*.pkl
+assets/videos/
+assets/shots/
+*.cache
+*.mp4
+*.avi
+*.log
+
+# ---- Audit output that is regenerated (the example report in reports/audit_expo stays)
+reports/*/risk_heatmap_*.png
+
+# ---- Archives: only the published weights are allowed
+*.zip
+*.7z
+!demo_weights/
+!demo_weights/*.zip

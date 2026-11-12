@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Astana Pilot</title>
+<style>
+:root{
+  --bg:#07090d; --bg2:#0d1118; --card:rgba(255,255,255,.045); --card2:rgba(255,255,255,.075); --line:rgba(255,255,255,.09);
+  --text:#f2f5fa; --dim:#8d98ab; --faint:#586174; --acc:#7be0ff; --acc2:#2f8cff; --ok:#4ade80; --warn:#fbbf24; --bad:#fb7185;
+  --r:22px; --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:radial-gradient(1200px 700px at 78% -10%,#12304a 0%,transparent 60%),radial-gradient(900px 600px at -10% 110%,#1b1740 0%,transparent 55%),var(--bg);
+  color:var(--text);font:400 clamp(13px,.55vw + 10px,16px)/1.45 "Segoe UI Variable Text","Segoe UI","SF Pro Text",system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:clamp(18px,3.2vw,44px) clamp(16px,3.2vw,44px) 120px}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:clamp(20px,4vh,44px)}
+.brand{display:flex;align-items:center;gap:12px;font:600 1.1em "Segoe UI Variable Display","Segoe UI",system-ui;letter-spacing:.01em}
+.logo{width:34px;height:34px;border-radius:11px;background:conic-gradient(from 210deg,var(--acc2),var(--acc),#a78bfa,var(--acc2));display:grid;place-items:center}
+.logo i{width:14px;height:14px;border-radius:50%;background:var(--bg)}
+.pill{padding:6px 12px;border:1px solid var(--line);border-radius:99px;color:var(--dim);font-size:.82em;display:flex;gap:8px;align-items:center}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--faint)}.dot.on{background:var(--ok);box-shadow:0 0 12px var(--ok)}
+h1{font:650 clamp(30px,4.6vw,58px)/1.04 "Segoe UI Variable Display","Segoe UI",system-ui;letter-spacing:-.025em;max-width:16ch}
+h1 span{background:linear-gradient(90deg,var(--acc),var(--acc2) 60%,#a78bfa);-webkit-background-clip:text;color:transparent}
+.sub{color:var(--dim);max-width:54ch;margin-top:14px;font-size:1.05em}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:clamp(22px,4vh,40px)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:clamp(16px,1.6vw,24px);backdrop-filter:blur(18px);transition:background .3s var(--ease),transform .3s var(--ease)}
+.c6{grid-column:span 6}.c12{grid-column:span 12}.c5{grid-column:span 5}.c7{grid-column:span 7}
+@media(max-width:860px){.c6,.c5,.c7{grid-column:span 12}}
+.t{font-size:.74em;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.t b{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--card2);color:var(--acc);font-size:1.05em;letter-spacing:0}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:16px;border:1px solid var(--line);background:transparent;cursor:pointer;text-align:left;color:inherit;font:inherit;transition:all .25s var(--ease)}
+.opt:hover{background:var(--card2)}
+.opt.sel{border-color:rgba(123,224,255,.55);background:linear-gradient(135deg,rgba(47,140,255,.16),rgba(123,224,255,.08));box-shadow:0 0 0 4px rgba(123,224,255,.06)}
+.opt .n{font-weight:600}.opt .s{color:var(--dim);font-size:.86em}
+.opt .st{margin-left:auto;font-size:.78em;padding:4px 10px;border-radius:99px;border:1px solid var(--line);color:var(--dim)}
+.opt .st.ready{color:var(--ok);border-color:rgba(74,222,128,.35)}
+.opt .st.get{color:var(--acc);border-color:rgba(123,224,255,.4)}
+select,input{background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--text);border-radius:12px;padding:10px 12px;font:inherit;width:100%;outline:none}
+select:focus,input:focus{border-color:rgba(123,224,255,.6)}
+option{background:#10151d}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.btn{appearance:none;border:1px solid var(--line);background:var(--card2);color:var(--text);padding:12px 18px;border-radius:14px;font:600 1em inherit;cursor:pointer;transition:all .25s var(--ease)}
+.btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.12)}
+.btn:active{transform:scale(.985)}
+.btn.primary{background:linear-gradient(135deg,var(--acc2),#3aa8ff);border-color:transparent;color:#fff;box-shadow:0 10px 30px -10px rgba(47,140,255,.7)}
+.btn.primary:hover{background:linear-gradient(135deg,#3b95ff,#59bbff)}
+.btn.ghost{background:transparent}
+.btn[disabled]{opacity:.45;pointer-events:none}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.big{padding:16px 24px;font-size:1.06em;border-radius:16px}
+.act{display:grid;gap:12px}
+.act .line{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px;border-radius:16px;border:1px solid var(--line)}
+.act .line h4{font-weight:600}.act .line p{color:var(--dim);font-size:.86em;max-width:42ch}
+.mini{display:flex;gap:8px;align-items:center;color:var(--dim);font-size:.85em}
+.mini input{width:84px;padding:8px 10px}
+.res{display:grid;grid-template-columns:1.15fr 1fr;gap:18px}
+@media(max-width:860px){.res{grid-template-columns:1fr}}
+.res img{width:100%;border-radius:16px;border:1px solid var(--line);display:block}
+table{width:100%;border-collapse:collapse;font-size:.9em}
+td{padding:9px 6px;border-bottom:1px solid var(--line)}td:first-child{color:var(--acc);font-weight:700;width:28px}
+td.v{text-align:right;color:var(--warn);font-variant-numeric:tabular-nums}
+.sm{color:var(--dim);font-size:.82em}
+.stats{display:flex;gap:22px;margin-bottom:12px;flex-wrap:wrap}
+.stats div{display:grid}.stats b{font:650 1.6em "Segoe UI Variable Display","Segoe UI";font-variant-numeric:tabular-nums}.stats span{color:var(--dim);font-size:.78em}
+.dock{position:fixed;left:50%;bottom:18px;transform:translateX(-50%) translateY(120%);width:min(880px,calc(100vw - 28px));background:rgba(14,18,26,.82);backdrop-filter:blur(22px);border:1px solid var(--line);border-radius:20px;padding:14px 16px;transition:transform .45s var(--ease);z-index:5}
+.dock.show{transform:translateX(-50%) translateY(0)}
+.dock .top{display:flex;align-items:center;gap:12px}
+.bar{height:3px;border-radius:3px;background:var(--card2);overflow:hidden;margin-top:10px}.bar i{display:block;height:100%;width:30%;background:linear-gradient(90deg,var(--acc2),var(--acc));animation:slide 1.4s infinite var(--ease)}
+.dock.done .bar i{animation:none;width:100%;background:var(--ok)}.dock.fail .bar i{animation:none;width:100%;background:var(--bad)}
+@keyframes slide{0%{margin-left:-30%}100%{margin-left:100%}}
+pre{margin-top:10px;max-height:150px;overflow:auto;color:#a9b4c6;font:12px/1.5 Consolas,monospace;white-space:pre-wrap;display:none}
+.dock.open pre{display:block}
+.linkb{background:none;border:0;color:var(--acc);cursor:pointer;font:inherit;font-size:.85em}
+.fade{animation:fade .6s var(--ease) both}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand"><div class="logo"><i></i></div>Astana Pilot</div>
+    <div class="pill"><span class="dot" id="gpuDot"></span><span id="status">Ready</span></div>
+  </header>
+
+  <section class="fade">
+    <h1>Drive. Measure. <span>Make streets safer.</span></h1>
+    <p class="sub">A self-driving agent and road-safety audit for real city districts, built from OpenStreetMap. Pick a district and a driver, then watch, explore or audit.</p>
+    <div class="hero-actions">
+      <button class="btn primary big" id="goView">Start 3D simulation</button>
+      <button class="btn big" id="goObs">Fly around the city</button>
+    </div>
+    <p class="sm" style="margin-top:12px">Inside the 3D simulation: <b>Map</b> (M) to choose A and B or change the route while driving, <b>Menu</b> (Esc) for camera, weather and more.</p>
+  </section>
+
+  <div class="grid">
+    <div class="card c6 fade">
+      <div class="t"><b>1</b>District</div>
+      <div class="opts" id="maps"></div>
+    </div>
+    <div class="card c6 fade">
+      <div class="t"><b>2</b>Driver</div>
+      <div class="opts">
+        <button class="opt sel" id="dExpert"><div><div class="n">Rule-based expert</div><div class="s">Ready to use. The teacher for the neural network.</div></div></button>
+        <button class="opt" id="dNet"><div><div class="n">Neural network</div><div class="s" id="netSub">Train one, or it appears here automatically.</div></div></button>
+      </div>
+      <div style="margin-top:12px"><select id="models"></select></div>
+      <div class="row" style="margin-top:12px">
+        <button class="btn" id="goLoad">Load network&hellip;</button>
+        <button class="btn" id="goTest">Test network</button>
+        <div class="mini">episodes <input id="evalN" type="number" value="30" min="10" max="300"></div>
+      </div>
+      <div class="row" style="margin-top:14px">
+        <div class="mini">Quality <select id="quality" style="width:auto"><option>auto</option><option>low</option><option>medium</option><option>high</option><option>ultra</option></select></div>
+        <div class="mini">Light <select id="light" style="width:auto"><option>day</option><option>dusk</option><option>night</option><option>snow</option></select></div>
+      </div>
+    </div>
+
+    <div class="card c12 fade" id="evalBox" style="display:none">
+      <div class="t"><b>&#10003;</b>Network test &mdash; <span id="evalName"></span></div>
+      <table id="evalTable"></table>
+      <p class="sm" style="margin-top:10px">Same random trips for the network and the rule-based expert. &ldquo;Seen&rdquo; districts were used in training, &ldquo;unseen&rdquo; were not &mdash; the gap between them shows whether the network learned to drive or only to remember maps.</p>
+    </div>
+
+    <div class="card c12 fade">
+      <div class="t"><b>3</b>Road-safety audit</div>
+      <div class="act"><div class="line"><div><h4>Where is this district dangerous?</h4><p>Drives random trips through the district, finds where near-misses cluster, and compares what-if changes: lower speed limit, longer green, aggressive or calm road users.</p></div>
+        <div class="row"><div class="mini">trips <input id="trips" type="number" value="150" min="20" max="3000"></div><button class="btn primary" id="goAudit">Run audit</button></div></div></div>
+    </div>
+
+    <div class="card c12 fade" id="results" style="display:none">
+      <div class="t"><b>&#10003;</b>Audit results</div>
+      <div class="stats" id="stats"></div>
+      <div class="res"><img id="heat" alt="risk heat-map"><div><table id="hot"></table><p class="sm" style="margin-top:12px">Ranked by weighted near-misses per km driven through the place. A screening tool for engineers: it shows where to look first, it does not predict crashes.</p>
+        <div class="row" style="margin-top:12px"><button class="btn" id="goHot">Show hot-spots in 3D</button><button class="btn ghost" id="openDir">Copy report path</button></div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="dock" id="dock"><div class="top"><span class="dot on" id="jdot"></span><b id="jtitle">Working</b><span class="sm" id="jtime"></span><span style="flex:1"></span>
+  <button class="linkb" id="jlog">details</button><button class="btn ghost" id="jstop" style="padding:7px 14px">Stop</button></div>
+  <div class="bar"><i></i></div><pre id="log"></pre></div>
+
+<script>
+const $=id=>document.getElementById(id);
+let S={maps:[],models:[],job:{},audit:null,selected:""}, map="", driver="expert", dirty=false;
+async function api(url,body){const r=await fetch(url,body?{method:"POST",body:JSON.stringify(body)}:{});return r.json()}
+async function run(action,extra={}){
+  const model=driver==="net"?$("models").value:"";
+  if(driver==="net"&&!model&&["view","tour","audit","eval","view2d","navigate","pick_route"].includes(action)){toast("Choose a trained network first, or use the expert.");return}
+  const r=await api("/api/run",{action,map,model,quality:$("quality").value,light:$("light").value,episodes:+$("trips").value,...extra});
+  if(!r.ok)toast(r.error);refresh()}
+function toast(t){$("status").textContent=t;setTimeout(()=>$("status").textContent="Ready",3500)}
+function renderMaps(){
+  $("maps").innerHTML="";
+  S.maps.forEach(m=>{const b=document.createElement("button");b.className="opt"+(m.path===map?" sel":"");
+    const preset=["expo","nurzhol"].includes(m.id);
+    b.innerHTML=`<div><div class="n">${m.title}</div><div class="s">${m.sub}</div></div><span class="st ${m.ready?"ready":"get"}">${m.ready?"Ready":"Download"}</span>`;
+    b.onclick=()=>{if(!m.ready&&preset){run("download",{preset:m.id});return}map=m.path;refresh(true)};$("maps").appendChild(b)})}
+function renderModels(){
+  const sel=$("models");let keep=sel.value;try{keep=keep||localStorage.getItem("astanaModel")||""}catch(e){}
+  sel.innerHTML=S.models.length?"":'<option value="">No trained networks yet</option>';
+  S.models.forEach(m=>{const o=document.createElement("option");o.value=m.path;o.textContent=m.label;sel.appendChild(o)});
+  if(keep&&S.models.some(m=>m.path===keep))sel.value=keep;
+  $("netSub").textContent=S.models.length?`${S.models.length} trained network${S.models.length>1?"s":""} found`:"None yet. Use Train, and it will appear here.";
+  $("dNet").classList.toggle("sel",driver==="net");$("dExpert").classList.toggle("sel",driver==="expert");sel.style.opacity=driver==="net"?1:.5}
+function renderJob(){
+  const j=S.job,dock=$("dock");
+  const show=j.title&&(j.running||j.code!==null);dock.classList.toggle("show",!!show);
+  dock.classList.toggle("done",!j.running&&j.code===0);dock.classList.toggle("fail",!j.running&&j.code!==null&&j.code!==0);
+  $("jtitle").textContent=j.running?j.title:(j.code===0?j.title+" — finished":j.title+" — stopped");
+  $("jdot").className="dot"+(j.running?" on":"");$("jstop").style.display=j.running?"":"none";
+  $("jtime").textContent=j.running?`${Math.floor(j.elapsed/60)}:${String(j.elapsed%60).padStart(2,"0")}`:"";
+  $("log").textContent=(j.log||[]).slice(-30).join("\n");$("status").textContent=j.running?j.title+"…":"Ready";$("gpuDot").className="dot"+(j.running?" on":"")}
+function renderAudit(){
+  const a=S.audit,box=$("results");if(!a){box.style.display="none";return}box.style.display="";
+  const b=a.summary[Object.keys(a.summary)[0]];
+  $("stats").innerHTML=`<div><b>${b.trips}</b><span>trips</span></div><div><b>${b.km.toFixed(1)} km</b><span>driven</span></div><div><b>${(b.success*100).toFixed(0)}%</b><span>completed</span></div><div><b>${b.collisions}</b><span>collisions</span></div>`;
+  $("heat").src=a.image;
+  $("hot").innerHTML=a.hotspots.map(h=>`<tr><td>${h.rank}</td><td>${h.street}<div class="sm">${h.where} · ${h.lat}, ${h.lon}</div></td><td class="v">${h.per_km}</td></tr>`).join("")}
+function renderEval(){
+  const sel=$("models").value||"",run=sel.split("/").slice(1,-1).join("/"),e=(S.evals||{})[run],box=$("evalBox");
+  if(!e){box.style.display="none";return}box.style.display="";$("evalName").textContent=run;
+  $("evalTable").innerHTML='<tr style="color:var(--faint)"><td></td><td>districts</td><td>driver</td><td class="v">success</td><td class="v">collisions</td><td class="v">violations</td><td class="v">trips</td></tr>'
+    +e.rows.map(r=>`<tr><td></td><td>${r.cities}</td><td>${r.policy}</td><td class="v" style="color:var(--ok)">${r.success}%</td><td class="v">${r.collision}%</td><td class="v">${r.violations}%</td><td class="v" style="color:var(--dim)">${r.n}</td></tr>`).join("")}
+async function refresh(force){
+  const was=S.job.running;S=await api("/api/state"+(map?("?map="+encodeURIComponent(map)):""));
+  if(!map||force&&!S.maps.find(m=>m.path===map))map=S.selected;
+  renderMaps();renderModels();renderJob();renderAudit();renderEval();
+  if(was&&!S.job.running)refresh(true)}
+$("goView").onclick=()=>run("view");
+$("goTest").onclick=()=>{driver="net";renderModels();run("eval",{episodes:+$("evalN").value})};
+$("goLoad").onclick=async()=>{toast("Choose the network file…");const r=await api("/api/run",{action:"import_model"});
+  if(!r.ok){toast(r.error);return}driver="net";await refresh(true);$("models").value=r.model;renderEval();toast("Network loaded")};
+$("models").onchange=()=>{try{localStorage.setItem("astanaModel",$("models").value)}catch(e){};renderEval()};$("goObs").onclick=()=>run("observer");$("goHot").onclick=()=>run("hotspots");
+$("goAudit").onclick=()=>run("audit",{variants:"baseline;limit0.8;green30;aggr"});
+$("dExpert").onclick=()=>{driver="expert";renderModels()};$("dNet").onclick=()=>{driver="net";renderModels()};
+$("jstop").onclick=()=>run("stop");$("jlog").onclick=()=>$("dock").classList.toggle("open");
+$("openDir").onclick=()=>navigator.clipboard&&navigator.clipboard.writeText(S.audit.dir).then(()=>toast("Folder path copied: "+S.audit.dir));
+refresh(true);setInterval(()=>refresh(),1500);
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "astana-pilot"
+version = "1.0.0"
+description = "Rule-compliant autonomous driving agent (PPO) in a multi-level OpenStreetMap city, with a 3D digital twin of Astana EXPO"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Astana AV project" }]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.11",
+    "networkx>=3.1",
+    "pillow>=10.0",
+    "matplotlib>=3.7",
+    "gymnasium>=0.29",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+train = ["stable-baselines3>=2.3", "tensorboard>=2.14"]          # torch is installed separately (CUDA wheel)
+view = ["ursina>=7.0", "pygame>=2.5", "imageio>=2.34", "imageio-ffmpeg>=0.5"]
+dev = ["pytest>=7.4"]
+
+[project.scripts]
+astana = "astana_pilot.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["astana_pilot*"]
+
+[tool.setuptools.package-data]
+"astana_pilot.studio" = ["index.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+

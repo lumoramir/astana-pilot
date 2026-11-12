@@ -1,0 +1,27 @@
+{
+  "name": "astana_expo",
+  "nodes": 1160,
+  "directed_edges": 2655,
+  "directed_km": 223.4,
+  "flyover_km": 0.0,
+  "tunnel_km": 0.0,
+  "ramp_edges": 0,
+  "signalised_junctions": 72,
+  "crossings_mapped": 457,
+  "buildings": 732,
+  "landmarks": [
+    "mega_silk_way"
+  ],
+  "road_classes": {
+    "secondary": 162,
+    "secondary_link": 30,
+    "primary_link": 2,
+    "residential": 675,
+    "service": 1251,
+    "unclassified": 121,
+    "tertiary": 361,
+    "primary": 4,
+    "tertiary_link": 39,
+    "living_street": 10
+  }
+}

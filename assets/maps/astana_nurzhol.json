@@ -1,0 +1,25 @@
+{
+  "name": "astana_nurzhol",
+  "nodes": 1250,
+  "directed_edges": 2790,
+  "directed_km": 192.5,
+  "flyover_km": 3.16,
+  "tunnel_km": 0.0,
+  "ramp_edges": 26,
+  "signalised_junctions": 59,
+  "crossings_mapped": 239,
+  "buildings": 1127,
+  "landmarks": [
+    "bayterek"
+  ],
+  "road_classes": {
+    "tertiary": 318,
+    "secondary_link": 79,
+    "secondary": 246,
+    "residential": 586,
+    "service": 1550,
+    "living_street": 8,
+    "tertiary_link": 2,
+    "unclassified": 1
+  }
+}

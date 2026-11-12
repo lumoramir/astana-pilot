@@ -1,0 +1,440 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.43100561164604,
+     51.09664359897466
+    ]
+   },
+   "properties": {
+    "rank": 1,
+    "street": "Alikhan Bokeikhan Street",
+    "where": "junction 8087530293 (priority)",
+    "score": 25.7,
+    "per_km": 367.4141603708705,
+    "exposure_m": 69.94831112131942,
+    "collision": 1,
+    "aeb": 3,
+    "ttc": 2,
+    "red_light": 0,
+    "yellow_light": 0,
+    "stop_sign": 0,
+    "yield": 0,
+    "zebra": 0,
+    "ped_close": 0,
+    "hard_brake": 2,
+    "phantom_brake": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.41382403707792,
+     51.095069788338144
+    ]
+   },
+   "properties": {
+    "rank": 2,
+    "street": "28/5 көше көшесі",
+    "where": "junction 11140220779 (priority)",
+    "score": 18.8,
+    "per_km": 199.12173641251016,
+    "exposure_m": 94.41460454650223,
+    "collision": 1,
+    "aeb": 0,
+    "ttc": 1,
+    "red_light": 0,
+    "yellow_light": 0,
+    "stop_sign": 0,
+    "yield": 0,
+    "zebra": 0,
+    "ped_close": 0,
+    "hard_brake": 4,
+    "phantom_brake": 4
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.4106024918464,
+     51.09551944852001
+    ]
+   },
+   "properties": {
+    "rank": 3,
+    "street": "Хейдар Әлиев көшесі",
+    "where": "junction 4985151137 (priority)",
+    "score": 18.0,
+    "per_km": 186.72048995735503,
+    "exposure_m": 96.40077531989664,
+    "collision": 1,
+    "aeb": 1,
+    "ttc": 1,
+    "red_light": 0,
+    "yellow_light": 0,
+    "stop_sign": 0,
+    "yield": 0,
+    "zebra": 0,
+    "ped_close": 0,
+    "hard_brake": 3,
+    "phantom_brake": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.43100561164604,
+     51.09034835642859
+    ]
+   },
+   "properties": {
+    "rank": 4,
+    "street": "Жасыл Саябақ-223 тұйық көшесі",
+    "where": "junction 2505673175 (priority)",
+    "score": 9.7,
+    "per_km": 150.3917674018683,
+    "exposure_m": 64.49821135541424,
+    "collision": 0,
+    "aeb": 1,
+    "ttc": 2,
+    "red_light": 0,
+    "yellow_light": 0,
+    "stop_sign": 0,
+    "yield": 0,
+    "zebra": 0,
+    "ped_close": 0,
+    "hard_brake": 2,
+    "phantom_brake": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.42635226853385,
+     51.09866706979304
+    ]
+   },
+   "properties": {
+    "rank": 5,
+    "street": "Mangilik El Avenue",
+    "where": "junction 4463429076 (priority)",
+    "score": 12.0,
+    "per_km": 133.2333106983832,
+    "exposure_m": 90.06756596453488,
+    "collision": 0,
+    "aeb": 2,
+    "ttc": 1,
+    "red_light": 0,
+    "yellow_light": 0,
+    "stop_sign": 0,
+    "yield": 0,
+    "zebra": 0,
+    "ped_close": 0,
+    "hard_brake": 4,
+    "phantom_brake": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.4116763402569,
+     51.08877454579207
+    ]
+   },
+   "properties": {
+    "rank": 6,
+    "street": "Ақмешіт көшесі",
+    "where": "junction 4520076207 (priority)",
+    "score": 6.7,
+    "per_km": 106.82783427763107,
+    "exposure_m": 62.717736864229664,
+    "collision": 0,
+    "aeb": 1,
+    "ttc": 0,
+    "red_light": 0,
+    "yellow_light": 0,
+    "stop_sign": 0,
+    "yield": 0,
+    "zebra": 0,
+    "ped_close": 0,
+    "hard_brake": 3,
+    "phantom_brake": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.43172151058639,
+     51.09934156006583
+    ]
+   },
+   "properties": {
+    "rank": 7,
+    "street": "Alikhan Bokeikhan Street",
+    "where": "junction 5281680461 (priority)",
+    "score": 11.4,
+    "per_km": 104.34680638537596,
+    "exposure_m": 109.25106761674397,
+    "collision": 1,
+    "aeb": 0,
+    "ttc": 0,
+    "red_light": 0,
+    "yellow_light": 0,
+    "stop_sign": 0,
+    "yield": 0,
+    "zebra": 0,
+    "ped_close": 0,
+    "hard_brake": 0,
+    "phantom_brake": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.41346608760776,
+     51.09349597770162
+    ]
+   },
+   "properties": {
+    "rank": 8,
+    "street": "28/5 көше көшесі",
+    "where": "junction 9879179071 (priority)",
+    "score": 10.4,
+    "per_km": 101.61516838566422,
+    "exposure_m": 102.3469248265028,
+    "collision": 0,
+    "aeb": 1,
+    "ttc": 1,
+    "red_light": 0,
+    "yellow_light": 0,
+    "stop_sign": 0,
+    "yield": 0,
+    "zebra": 0,
+    "ped_close": 0,
+    "hard_brake": 4,
+    "phantom_brake": 2
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.40988659290606,
+     51.09372080779256
+    ]
+   },
+   "properties": {
+    "rank": 9,
+    "street": "Хейдар Әлиев көшесі",
+    "where": "junction 4985151161 (signalised)",
+    "score": 7.7,
+    "per_km": 100.27267072528058,
+    "exposure_m": 76.79061447456479,
+    "collision": 0,
+    "aeb": 1,
+    "ttc": 1,
+    "red_light": 0,
+    "yellow_light": 0,
+    "stop_sign": 0,
+    "yield": 0,
+    "zebra": 0,
+    "ped_close": 0,
+    "hard_brake": 2,
+    "phantom_brake": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.4302897127057,
+     51.095069788338144
+    ]
+   },
+   "properties": {
+    "rank": 10,
+    "street": "Uly Dala Avenue",
+    "where": "junction 4382872222 (signalised)",
+    "score": 5.0,
+    "per_km": 79.39365528474073,
+    "exposure_m": 62.97732459940016,
+    "collision": 0,
+    "aeb": 1,
+    "ttc": 1,
+    "red_light": 0,
+    "yellow_light": 0,
+    "stop_sign": 0,
+    "yield": 0,
+    "zebra": 0,
+    "ped_close": 0,
+    "hard_brake": 0,
+    "phantom_brake": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.42599431906368,
+     51.09731808924745
+    ]
+   },
+   "properties": {
+    "rank": 11,
+    "street": "Mangilik El Avenue",
+    "where": "junction 8084055198 (priority)",
+    "score": 6.0,
+    "per_km": 77.88932500037839,
+    "exposure_m": 77.03237895527855,
+    "collision": 0,
+    "aeb": 0,
+    "ttc": 1,
+    "red_light": 0,
+    "yellow_light": 0,
+    "stop_sign": 0,
+    "yield": 0,
+    "zebra": 0,
+    "ped_close": 0,
+    "hard_brake": 4,
+    "phantom_brake": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.40917069396572,
+     51.09237182724697
+    ]
+   },
+   "properties": {
+    "rank": 12,
+    "street": "Хейдар Әлиев көшесі",
+    "where": "junction 7209492046 (priority)",
+    "score": 7.0,
+    "per_km": 77.78582378943989,
+    "exposure_m": 89.99069057812449,
+    "collision": 0,
+    "aeb": 1,
+    "ttc": 1,
+    "red_light": 0,
+    "yellow_light": 0,
+    "stop_sign": 0,
+    "yield": 0,
+    "zebra": 0,
+    "ped_close": 0,
+    "hard_brake": 2,
+    "phantom_brake": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.42062507701114,
+     51.09641876888373
+    ]
+   },
+   "properties": {
+    "rank": 13,
+    "street": "Uly Dala Avenue",
+    "where": "junction 13923199061 (signalised)",
+    "score": 7.0,
+    "per_km": 77.5168547517534,
+    "exposure_m": 90.3029415011406,
+    "collision": 0,
+    "aeb": 1,
+    "ttc": 1,
+    "red_light": 0,
+    "yellow_light": 0,
+    "stop_sign": 0,
+    "yield": 0,
+    "zebra": 0,
+    "ped_close": 0,
+    "hard_brake": 2,
+    "phantom_brake": 0
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.43136356111621,
+     51.097992579520245
+    ]
+   },
+   "properties": {
+    "rank": 14,
+    "street": "Alikhan Bokeikhan Street",
+    "where": "junction 9879298160 (priority)",
+    "score": 4.7,
+    "per_km": 66.41504692550899,
+    "exposure_m": 70.76709597557783,
+    "collision": 0,
+    "aeb": 1,
+    "ttc": 0,
+    "red_light": 0,
+    "yellow_light": 0,
+    "stop_sign": 0,
+    "yield": 0,
+    "zebra": 0,
+    "ped_close": 0,
+    "hard_brake": 1,
+    "phantom_brake": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     71.41024454237623,
+     51.09439529806535
+    ]
+   },
+   "properties": {
+    "rank": 15,
+    "street": "Хейдар Әлиев көшесі",
+    "where": "junction 4985151153 (priority)",
+    "score": 5.0,
+    "per_km": 51.457017863955706,
+    "exposure_m": 97.16847589612007,
+    "collision": 0,
+    "aeb": 0,
+    "ttc": 0,
+    "red_light": 0,
+    "yellow_light": 0,
+    "stop_sign": 0,
+    "yield": 0,
+    "zebra": 0,
+    "ped_close": 1,
+    "hard_brake": 2,
+    "phantom_brake": 0
+   }
+  }
+ ]
+}
